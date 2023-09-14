@@ -9,7 +9,7 @@ CREATE TABLE role (
     salary INTEGER,
     department_id INTEGER,
     FOREIGN KEY (department_id)
-    REFERENCES department(id)
+    REFERENCES department(name)
     ON DELETE SET NULL
 );
 
@@ -19,7 +19,7 @@ CREATE TABLE employee(
     last_name VARCHAR(50) NOT NULL,
     role_id INTEGER,
     FOREIGN KEY (role_id)
-    REFERENCES role(id)
+    REFERENCES role(name)
     ON DELETE SET NULL,
     manager_id INTEGER
 );
